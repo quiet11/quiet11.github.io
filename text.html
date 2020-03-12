@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reduce(array, combine, start) {
+        let current = start;
+        for (let element of array) {
+        current = combine(current, element);
+        }
+        return current;
+        }
+         console.log(reduce([1, 2, 3, 4], (a, b) => a + b, 0));
+        // → 10>
+        </script>
+</body>
+</html>
