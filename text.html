@@ -1,33 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function reduce(array, combine, start) {
-        var current = start;
-        for (var element of array) {
-        current = combine(current, element);
-        }
-        return current;
-        }
+<html>
+    <body>
+        <script src="./stat.js"></script>
+        <script src="./underscore.js"></script>
+        <script>
+var data=[
+    {name:'计算机安装与维护',credit:2}
+    ,{name:'静态网页制作',credit:2}
+    ,{name:'计算机编程基础',credit:4}
+    ,{name:'大学英语',credit:2}
+    ,{name:'软件技术导论',credit:2}
+];
+console.log(my.max(data));
+console.log(_.max(data,function(it){return it.credit}));
 
-        var data=[
-            {name:"计算机安装与维护",credit:2}
-            ,{name:"静态网页制作",credit:2}
-            ,{name:"计算机编程基础",credit:4}
-            ,{name:"大学英语",credit:2}
-            ,{name:"软件技术导论",credit:2}
-        ]
-         console.log(
-             reduce(
-                 [data[0].credit, data[1].credit, data[2].credit, data[3].credit,data[4].credit], 
-                 function(a, b){return(a + b);},
-                  0));
+
 
         </script>
-</body>
+
+    </body>
 </html>
