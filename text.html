@@ -1,18 +1,38 @@
 <html>
     <body>
-        <script src="./stat.js"></script>
-        <script src="./underscore.js"></script>
+        <!-- <script src="./stat.js"></script>
+        <script src="./underscore.js"></script> -->
         <script>
-var data=[
-    {name:'计算机安装与维护',credit:2}
-    ,{name:'静态网页制作',credit:2}
-    ,{name:'计算机编程基础',credit:4}
-    ,{name:'大学英语',credit:2}
-    ,{name:'软件技术导论',credit:2}
-];
-console.log(my.max(data));
-console.log(_.max(data,function(it){return it.credit}));
+// var data=[
+//     {name:'计算机安装与维护',credit:2}
+//     ,{name:'静态网页制作',credit:2}
+//     ,{name:'计算机编程基础',credit:4}
+//     ,{name:'大学英语',credit:2}
+//     ,{name:'软件技术导论',credit:2}
+// ];
+// console.log(my.max(data));
+// console.log(_.max(data,function(data){return data.credit}));
 
+
+var value=11;
+ var initvalue=22;
+ var s=0;
+ function addition(){
+    var value=initvalue;
+    var s=0;
+	return function add(x){
+      s++;
+	  value=value+x;
+	   if(s==2){
+	   console.log(value);
+	   }
+	}
+ }
+
+ var func=addition();
+  
+ func(33);
+ func(44);
 
 
         </script>
